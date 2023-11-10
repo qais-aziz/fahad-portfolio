@@ -1,23 +1,18 @@
 import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import Projects from "./components/Projects";
-import Reviews from "./components/Reviews";
-import SocialMediaProfiles from "./components/SocialMediaProfiles";
-import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
+import {Route, Routes} from "react-router-dom";
+import WelcomePage from "./components/WelcomePage";
+import AllProjects from "./components/AllProjects";
 
 function App() {
-  return (
-    <div>
-        <Header />
-        <HeroSection />
-        <SocialMediaProfiles />
-        <Projects />
-        <Reviews />
-        <ContactUs />
-        <Footer />
-    </div>
-  );
+    return (<div>
+            <Header/>
+                <Routes>
+                    <Route path={'/'} element={<WelcomePage/>}/>
+                    <Route path={'/all-projects'} element={<AllProjects/>}/>
+                </Routes>
+            <Footer/>
+        </div>);
 }
 
 export default App;
