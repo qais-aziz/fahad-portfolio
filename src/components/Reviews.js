@@ -1,13 +1,16 @@
+import {useMyInformation} from "../context/PersonalInfoContext";
 
 
 function Reviews() {
+    const {myInfo} = useMyInformation()
+
     return (
        <div>
            <div className="d-flex align-items-center justify-content-center">
                <img height={100} width={100} src="https://avatars.githubusercontent.com/u/75601362?v=4" alt=""/>
            </div>
            <h3 className="text-center">
-               Fahad Shahzad
+               {myInfo.name}
            </h3>
            <p className="text-center">
                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aperiam dolorum ea labore libero nemo obcaecati ratione repellendus voluptate? Culpa nisi optio qui quod sed unde. Consequatur, numquam quod!
