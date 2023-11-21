@@ -5,8 +5,6 @@ const EcommerceContext = createContext();
 export const EcommerceInformationProvider = ({ children }) => {
     const [product,setProducts] = useState([])
 
-
-
     return (
         <EcommerceContext.Provider value={{
             product,setProducts

@@ -12,9 +12,9 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <MyInformationProvider>
-                <EcommerceInformationProvider/>
-                <App/>
-                <EcommerceInformationProvider/>
+                <EcommerceInformationProvider>
+                 <App/>
+                </EcommerceInformationProvider>
             </MyInformationProvider>
         </BrowserRouter>
     </React.StrictMode>
