@@ -4,10 +4,12 @@ const EcommerceContext = createContext();
 
 export const EcommerceInformationProvider = ({ children }) => {
     const [product,setProducts] = useState([])
+    const [error, setError] = useState(false)
 
     return (
         <EcommerceContext.Provider value={{
-            product,setProducts
+            product,setProducts,
+            error, setError
         }}>
             {children}
         </EcommerceContext.Provider>

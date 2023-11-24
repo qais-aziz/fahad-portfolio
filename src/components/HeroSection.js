@@ -1,6 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
 import image from '../assets/images/callsense.png'
-import {useState} from "react";
 function HeroSection() {
     return (
         <Carousel data-bs-theme="dark">

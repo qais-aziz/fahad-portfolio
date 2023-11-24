@@ -1,9 +1,12 @@
+import {useEcommerceData} from "../context/EcommerceContext";
 
 
 function SocialMediaProfiles() {
+    const {product} = useEcommerceData()
     return (
        <div style={{backgroundColor: '#d7d7d7'}} className={"align-items-center p-4"}>
            <div className="d-flex align-items-center justify-content-center">
+               <p>{product.length}</p>
                <a href="https://github.com/fahad-qureshi786">
                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" className="bi bi-github"
                         viewBox="0 0 16 16">
