@@ -1,8 +1,27 @@
 import {useMyInformation} from "../context/PersonalInfoContext";
-
+import {useEffect, useState} from "react";
+import {APIs} from "../const/APIs";
+import axios from "axios";
 
 function Reviews() {
     const {myInfo} = useMyInformation()
+    const {reviews,setReviews} = useMyInformation()
+
+    const [error, setError] = useState(false)
+
+    const fetchReviews = async () => {
+        await axios.get(APIs.ECOMMERCE.PRODUCTS.GET_REVIEWS).then(res=> {
+            setProducts(res.data)
+            setError(false)
+        }).catch(err=> {
+            setError(true)
+            console.log(err)
+        })
+    }
+
+   useEffect(()=> {
+       fetchReviews()
+   }, [])
 
     return (
        <div>
