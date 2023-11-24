@@ -15,6 +15,7 @@ function Header() {
                         <Nav.Link className={"text-white"}> <Link style={{textDecoration: 'none'}} className={"text-white"} to={"/all-projects"}> Projects </Link></Nav.Link>
                         <Nav.Link className={"text-white"} href="#link">Reviews</Nav.Link>
                         <Nav.Link className={"text-white"} href="#link">Social Media Profiles</Nav.Link>
+                        <Nav.Link className={"text-white"}> <Link style={{textDecoration: 'none'}} className={"text-white"} to={"/products"}> Products </Link></Nav.Link>
                         <Nav.Link className={"text-white"} href="#link">Contact Us</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
